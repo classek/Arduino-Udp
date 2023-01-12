@@ -1,12 +1,12 @@
 #include <Ethernet.h>
 
-byte mac[] = { 0xA5, 0x5A, 0xA5, 0xA5, 0xA5, 0x5A };
-byte ip[] = { 192, 168, 1, 11 };
-byte gateway[] = { 192, 168, 1, 1 };
+byte mac[] = { 0xA5, 0x5A, 0xA5, 0xA5, 0xA5, 0x5A }; // MAc adress can be changed
+byte ip[] = { 192, 168, 1, 11 }; // Ip can be changed
+byte gateway[] = { 192, 168, 1, 1 }; Gateway ip should match your device
 byte subnet[] = { 255, 255, 255, 0 };
 EthernetUDP Udp;
 
-int relayPins[] = {7, 9, 3, 8};
+int relayPins[] = {7, 9, 3, 8}; // numbers might be different
 
 void setup() {
   Ethernet.begin(mac, ip, gateway, subnet);
@@ -24,7 +24,7 @@ void loop() {
     int len = Udp.read(message, 100);
     if (len > 0) {
       message[len] = 0;
-    }
+    }  // This turns on & off the relay
     String command = String(message);
     int relayNumber = command.substring(3, 5).toInt();
     if (relayNumber >= 1 && relayNumber <= 4) {
@@ -34,7 +34,7 @@ void loop() {
         digitalWrite(relayPins[relayNumber - 1], LOW);
       }
       char response[8];
-      sprintf(response, "ok %d", relayNumber);
+      sprintf(response, "ok %d", relayNumber); // send upd message back with OK and relay number
       Udp.beginPacket(Udp.remoteIP(), Udp.remotePort());
       Udp.write(response);
       Udp.endPacket();
