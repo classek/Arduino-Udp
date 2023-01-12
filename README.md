@@ -31,4 +31,4 @@ This sketch is a simple example of how to control relays via UDP commands and mo
 
 
 
-Additional is a Python script with gui that can control the relay over ethernet make sure that you have the same ip-adress on both devices and that they are connected to the same network.
+Additional is a Python script with gui that can control the relay over ethernet, make sure that you have the same ip-adress on both places and that they are connected to the same network.
