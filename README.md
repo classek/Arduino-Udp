@@ -5,7 +5,7 @@ Hardware requirements
 Arduino board
 4 relays
 Ethernet shield
-'
+
 Software requirements
 Arduino IDE
 
@@ -17,13 +17,13 @@ Update the MAC address and IP address in the sketch to match your Ethernet shiel
 Upload the sketch to your Arduino board
 
 Send UDP commands to control the relays in the format "on/off relay_number"
-The sketch will send back a response indicating the status of the command and also the state of relays will be displayed on serial monitor
+The sketch will send back a response indicating the status of the command and also the state of the relay.
 
 Notes
 The sketch uses the Ethernet library and EthernetUDP library, make sure they are included in your Arduino IDE
 The sketch assumes that the device sending the UDP commands is on the same network as the Arduino board
 The default UDP port used in the sketch is 1331, you can change it to any other port you desire
-The sketch assumes that the relays are normally open and turns them on when a "on" command is sent
+The sketch assumes that the relays are normally closed and turns them on when a "on" command is sent
 You can modify the sketch as per your requirement, for example to include more relays or change the pin numbers
 You can also modify the sketch to monitor the state of relays via other means, such as over HTTP or MQTT
 Conclusion
