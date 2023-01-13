@@ -27,8 +27,9 @@ The sketch assumes that the relays are normally open and turns them on when a "o
 You can modify the sketch as per your requirement, for example to include more relays or change the pin numbers
 You can also modify the sketch to monitor the state of relays via other means, such as over HTTP or MQTT
 Conclusion
-This sketch is a simple example of how to control relays via UDP commands and monitor their state via serial port using an Arduino board and Ethernet shield. It can be easily modified to suit your specific needs or expanded to include more features.
+This sketch is a simple example of how to control relays via UDP commands using an Arduino board and Ethernet shield. 
+It can be easily modified to suit your specific needs or expanded to include more features.
 
 
 
-Additional is a Python script with gui that can control the relay over ethernet, make sure that you have the same ip-adress on both places and that they are connected to the same network.
+Additional is a Python script with gui that can control the relay over ethernet tkinter library in Python is required, make sure that you have the same ip-adress on both places and that they are connected to the same network.
