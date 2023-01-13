@@ -2,7 +2,7 @@
 
 byte mac[] = { 0xA5, 0x5A, 0xA5, 0xA5, 0xA5, 0x5A }; // MAc adress can be changed
 byte ip[] = { 192, 168, 1, 11 }; // Ip can be changed
-byte gateway[] = { 192, 168, 1, 1 }; Gateway ip should match your device
+byte gateway[] = { 192, 168, 1, 1 };// Gateway ip should match your device
 byte subnet[] = { 255, 255, 255, 0 };
 EthernetUDP Udp;
 
