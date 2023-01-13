@@ -16,7 +16,7 @@ Open the sketch in the Arduino IDE
 Update the MAC address and IP address in the sketch to match your Ethernet shield's MAC and IP address
 Upload the sketch to your Arduino board
 
-Send UDP commands to control the relays in the format "on/off relay_number"
+Send UDP commands to control the relays in the format "ON/OFF relay_number"
 The sketch will send back a response indicating the status of the command and also the state of the relay.
 
 Notes
